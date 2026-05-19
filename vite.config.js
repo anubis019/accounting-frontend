@@ -7,7 +7,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       '/api': {
-        target: process.env.VITE_API_URL || 'http://localhost:8000',
+        target: process.env.VITE_API_URL || 'https://your-backend.up.railway.app/api',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '/api')
       }
