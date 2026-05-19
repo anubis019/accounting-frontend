@@ -1,9 +1,9 @@
 import axios from 'axios'
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+export const API_HOST = import.meta.env.VITE_API_URL || 'https://accounting-backend-production-101f.up.railway.app'
 
 const api = axios.create({
-  baseURL: `${API_URL}/api`,
+  baseURL: `${API_HOST}/api`,
   headers: {
     'Content-Type': 'application/json',
   },

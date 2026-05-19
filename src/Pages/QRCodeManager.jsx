@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from 'react-query';
-import api from '../api';
+import api, { API_HOST } from '../api';
 import { QRCodeSVG } from 'qrcode.react';
 import toast from 'react-hot-toast';
 import { formatCurrency } from '../utils/formatters';
@@ -75,7 +75,7 @@ export default function QRCodeManager() {
             <p className="text-sm text-gray-500">{qr.description}</p>
             <p className="text-lg font-bold text-primary-600">{formatCurrency(qr.amount)}</p>
             <p className="text-xs text-gray-400 mt-2">Scans: {qr.scans_count} | Payments: {qr.payments_count}</p>
-            <a href={`${import.meta.env.VITE_API_URL}/api/qr/${qr.id}/download`} className="text-primary-600 text-sm mt-2 inline-block">Download PNG</a>
+            <a href={`${API_HOST}/api/qr/${qr.id}/download`} className="text-primary-600 text-sm mt-2 inline-block">Download PNG</a>
           </div>
         ))}
       </div>
