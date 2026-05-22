@@ -2,7 +2,7 @@ import axios from 'axios'
 
 export const API_HOST =
   import.meta.env.VITE_API_URL ||
-  'https://accounting-backend-production-101f.up.railway.app'
+  'https://accounting-backend-production-e5e6.up.railway.app'
 
 const api = axios.create({
   baseURL: `${API_HOST}/api`,
