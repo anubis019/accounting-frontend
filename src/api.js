@@ -1,6 +1,8 @@
 import axios from 'axios'
 
-export const API_HOST = import.meta.env.VITE_API_URL || 'https://accounting-backend-production-101f.up.railway.app'
+export const API_HOST =
+  import.meta.env.VITE_API_URL ||
+  'https://accounting-backend-production-101f.up.railway.app'
 
 const api = axios.create({
   baseURL: `${API_HOST}/api`,
@@ -9,12 +11,13 @@ const api = axios.create({
   },
 })
 
-// Add token to requests
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('token')
+
   if (token) {
     config.headers.Authorization = `Bearer ${token}`
   }
+
   return config
 })
 
