@@ -5,7 +5,7 @@ export const API_HOST =
   'https://accounting-backend-production-2ded.up.railway.app/api'
 
 const api = axios.create({
-  baseURL: `${API_HOST}/api`,
+  baseURL: API_HOST,
   headers: {
     'Content-Type': 'application/json',
   },
