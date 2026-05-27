@@ -2,7 +2,7 @@ import axios from 'axios'
 
 export const API_HOST =
   import.meta.env.VITE_API_URL ||
-  'https://accounting-backend-production-2ded.up.railway.app/api'
+  'https://accounting-backend-production-2ded.up.railway.app'
 
 const api = axios.create({
   baseURL: API_HOST,
@@ -22,3 +22,4 @@ api.interceptors.request.use((config) => {
 })
 
 export default api
+
