@@ -7,7 +7,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       '/api': {
-        target: process.env.VITE_API_URL || 'https://accounting-backend-production-101f.up.railway.app/api',
+        target: process.env.VITE_API_URL || 'https://accounting-backend-production-2ded.up.railway.app',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '/api')
       }
