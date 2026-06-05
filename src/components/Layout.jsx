@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { useAuth } from '../contexts/AuthContext'
-import { useDarkMode } from '../contexts/DarkModeContext'
+import { useAuth } from '../Contexts/AuthContext'
+import { useDarkMode } from '../Contexts/DarkModeContext'
 
 const navigation = [
   { name: 'Dashboard', href: '/dashboard', icon: '📊' },

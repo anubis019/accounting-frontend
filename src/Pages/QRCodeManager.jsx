@@ -3,7 +3,7 @@ import { useQuery, useMutation, useQueryClient } from 'react-query';
 import api, { API_HOST } from '../api';
 import { QRCodeSVG } from 'qrcode.react';
 import toast from 'react-hot-toast';
-import { formatCurrency } from '../utils/formatters';
+import { formatCurrency } from '../Utils/formatters';
 
 export default function QRCodeManager() {
   const [showForm, setShowForm] = useState(false);

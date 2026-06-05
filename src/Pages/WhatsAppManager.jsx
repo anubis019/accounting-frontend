@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from 'react-query';
 import api from '../api';
 import toast from 'react-hot-toast';
-import { formatDateTime } from '../utils/formatters';
+import { formatDateTime } from '../Utils/formatters';
 
 export default function WhatsAppManager() {
   const [selectedConversation, setSelectedConversation] = useState(null);

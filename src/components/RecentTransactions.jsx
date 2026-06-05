@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { formatCurrency, formatDate } from '../utils/formatters';
+import { formatCurrency, formatDate } from '../Utils/formatters';
 
 export default function RecentTransactions({ transactions }) {
   if (!transactions || transactions.length === 0) {
